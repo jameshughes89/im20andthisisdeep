@@ -13,10 +13,10 @@ import time
 reddit = praw.Reddit('bot1')
 
 # Get the X *hot* posts
-X = 15
+X = 17
 lsc = reddit.subreddit('LateStageCapitalism')
 hot_subs = []
-for sub in lsc.hot(limit=15):
+for sub in lsc.hot(limit=X):
     if sub.selftext == '':
         hot_subs.append(sub)
 
