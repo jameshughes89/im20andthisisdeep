@@ -12,11 +12,13 @@ import time
 
 reddit = praw.Reddit('bot1')
 
-# Get the 5 *hot* posts
+# Get the X *hot* posts
+X = 15
 lsc = reddit.subreddit('LateStageCapitalism')
 hot_subs = []
-for sub in lsc.hot(limit=10):
-    hot_subs.append(sub)
+for sub in lsc.hot(limit=15):
+    if sub.selftext == '':
+        hot_subs.append(sub)
 
 
 # Post the submissions. Once every minute. 
@@ -30,5 +32,5 @@ for sub in hot_subs:
         #print sub.title
         #print sub.url
         i20.submit(sub.title, url=sub.url)
-        time.sleep(600 - ((time.time() - startTime) % 600.0))
+        time.sleep(3600 - ((time.time() - startTime) % 3600.0))
 
