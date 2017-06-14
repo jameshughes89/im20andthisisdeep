@@ -52,14 +52,14 @@ startTime = time.time()
 for sub in hot_subs:
     # only submit if it doesn't have self text 
     if sub.selftext == '':
-        print sub.title
-        print sub.url
+        #print sub.title
+        #print sub.url
         if len(sub.title) <= 100:
             tweet=sub.title + " " + sub.shortlink + " #LateStageCapitalism"
         else:
             tweet=sub.shortlink + " #LateStageCapitalism"
 
         tweet_image(api, url=sub.url, message=tweet)  
-        print
+        #print
         time.sleep(3600 - ((time.time() - startTime) % 3600.0))
 
