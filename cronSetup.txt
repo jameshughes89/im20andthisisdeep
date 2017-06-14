@@ -1,3 +1,3 @@
-type: cron-e
+type: crontab -e
 For the first time, click nano
 enter this below comments: 0 0 * * * python /location/of/the/script/im20AndThisIsDeep/im20andthisisdeep.py
