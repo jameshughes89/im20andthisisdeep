@@ -27,8 +27,8 @@ for sub in hot_subs:
     if sub.selftext == '':
     # only submit if it's a link to imgur
     #if sub.url.find('imgur') != -1 or sub.url.find('i.redd.it') != -1:
-        print sub.title
-        print sub.url
-        #i20.submit(sub.title, url=sub.url)
+        #print sub.title
+        #print sub.url
+        i20.submit(sub.title, url=sub.url)
         time.sleep(600 - ((time.time() - startTime) % 600.0))
 
