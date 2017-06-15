@@ -1,3 +1,4 @@
+#!/home/james/anaconda/bin/python
 '''
 A reddit bot which just reposts links from /r/LateStageCapitalism to /r/im20andthisisdeep
 
@@ -13,7 +14,7 @@ import time
 reddit = praw.Reddit('bot1')
 
 # Get the X *hot* posts
-X = 17
+X = 18
 lsc = reddit.subreddit('LateStageCapitalism')
 hot_subs = []
 for sub in lsc.hot(limit=X):

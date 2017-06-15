@@ -1,3 +1,6 @@
 type: crontab -e
 For the first time, click nano
-enter this below comments: 0 0 * * * python /location/of/the/script/im20AndThisIsDeep/im20andthisisdeep.py
+enter this below comments:
+0 6 * * * /somePath/botShellReddit.sh 1> /somePath/r.out 2> /somePath/r.out
+0 6 * * * /somePath/botShellTwitter.sh 1> /somePath/t.out 2> /somePath/t.out
+

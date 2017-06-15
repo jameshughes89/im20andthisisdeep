@@ -1,3 +1,4 @@
+#!/home/james/anaconda/bin/python
 '''
 A Twitter bot which just tweets links from /r/LateStageCapitalism 
 
@@ -39,7 +40,7 @@ api = tweepy.API(auth)
 
 
 # Get the X *hot* posts
-X = 17
+X = 18
 reddit = praw.Reddit('bot1')
 lsc = reddit.subreddit('LateStageCapitalism')
 hot_subs = []
@@ -58,10 +59,9 @@ for sub in hot_subs:
             tweet=sub.title + " " + sub.shortlink + " #LateStageCapitalism"
         else:
             tweet=sub.shortlink + " #LateStageCapitalism"
-
         try:
             tweet_image(api, url=sub.url, message=tweet)  
-        except TweepError:
+        except Exception:
             continue
         #print
         time.sleep(3600 - ((time.time() - startTime) % 3600.0))
